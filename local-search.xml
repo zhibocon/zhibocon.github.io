@@ -66,9 +66,9 @@
     
     <tags>
       
-      <tag>fps</tag>
-      
       <tag>144hz</tag>
+      
+      <tag>fps</tag>
       
       <tag>HZ</tag>
       
@@ -99,6 +99,8 @@
     
     <tags>
       
+      <tag>fps</tag>
+      
       <tag>1080P60fps</tag>
       
       <tag>720P30fps</tag>
@@ -106,8 +108,6 @@
       <tag>bilibili</tag>
       
       <tag>B站</tag>
-      
-      <tag>fps</tag>
       
       <tag>shanaencoder</tag>
       
@@ -268,19 +268,19 @@
     
     <tags>
       
-      <tag>PS4</tag>
-      
       <tag>xbox</tag>
       
-      <tag>Padavan</tag>
-      
-      <tag>梅林</tag>
+      <tag>PS4</tag>
       
       <tag>Dnsmasq</tag>
+      
+      <tag>Padavan</tag>
       
       <tag>下载慢</tag>
       
       <tag>安装停止</tag>
+      
+      <tag>梅林</tag>
       
     </tags>
     
@@ -305,23 +305,23 @@
     
     <tags>
       
-      <tag>PS4</tag>
-      
       <tag>xbox</tag>
+      
+      <tag>PS4</tag>
       
       <tag>路由器</tag>
       
-      <tag>ns</tag>
-      
       <tag>Padavan</tag>
+      
+      <tag>梅林</tag>
+      
+      <tag>ns</tag>
       
       <tag>SS</tag>
       
       <tag>主机</tag>
       
       <tag>加速器</tag>
-      
-      <tag>梅林</tag>
       
     </tags>
     
@@ -563,13 +563,13 @@
     
     <tags>
       
-      <tag>PS4</tag>
-      
       <tag>HDMI</tag>
       
       <tag>xbox</tag>
       
       <tag>采集卡</tag>
+      
+      <tag>PS4</tag>
       
       <tag>switch</tag>
       
