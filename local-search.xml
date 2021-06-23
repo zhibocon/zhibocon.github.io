@@ -66,9 +66,9 @@
     
     <tags>
       
-      <tag>fps</tag>
-      
       <tag>144hz</tag>
+      
+      <tag>fps</tag>
       
       <tag>HZ</tag>
       
@@ -99,6 +99,8 @@
     
     <tags>
       
+      <tag>fps</tag>
+      
       <tag>1080P60fps</tag>
       
       <tag>720P30fps</tag>
@@ -106,8 +108,6 @@
       <tag>bilibili</tag>
       
       <tag>B站</tag>
-      
-      <tag>fps</tag>
       
       <tag>shanaencoder</tag>
       
@@ -565,11 +565,11 @@
       
       <tag>PS4</tag>
       
+      <tag>采集卡</tag>
+      
       <tag>HDMI</tag>
       
       <tag>xbox</tag>
-      
-      <tag>采集卡</tag>
       
       <tag>switch</tag>
       
