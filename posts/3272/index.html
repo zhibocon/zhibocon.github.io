@@ -1,0 +1,549 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="
+废话
+
+上一篇中我介绍了HD60 Pro的开箱，以及安装，没看的，了解一哈？ 这一次，来给大家分享一些HD60 Pro的深度使用经验（其他任何地方看不到的干活 涉及到的使用环境：录制、直播、录制+直播； 涉及到的软件：Game Capture HD、OBS Studio、XSplit Broadcaster、XSplit Gamecaster 此篇内容应该说满足了90%用户的需求，另外的10%，">
+  <meta name="author" content="比木">
+  <meta name="keywords" content="比木,Bimuakung,bimu.me,bimu.tv,bimu.live,直播控">
+  
+  <title>Elgato HD60 Pro 直播、录制深度使用体验 - 比木-工具人&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>比木-工具人's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-bug"></i>
+                实验室
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://live.bilibili.com/1214834">
+                    
+                    Bilibili直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.twitch.tv/bimuakung">
+                    
+                    Twitch直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://space.bilibili.com/38343840">
+                    
+                    斗鱼直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://space.bilibili.com/38343840">
+                    
+                    虎牙直播间
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Elgato HD60 Pro 直播、录制深度使用体验">
+              
+                Elgato HD60 Pro 直播、录制深度使用体验
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-06-02 17:38" pubdate>
+        2018年6月2日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      22
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Elgato HD60 Pro 直播、录制深度使用体验</h1>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p><strong>废话</strong></p>
+</blockquote>
+<p>上一篇中我介绍了<a target="_blank" rel="noopener" href="https://zhibocon.com/elgato-hd60-pro.exe">HD60 Pro的开箱，以及安装</a>，没看的，了解一哈？ 这一次，来给大家分享一些HD60 Pro的<strong>深度使用经验</strong>（其他任何地方看不到的干活 涉及到的使用环境：录制、直播、录制+直播； 涉及到的软件：Game Capture HD、OBS Studio、XSplit Broadcaster、XSplit Gamecaster 此篇内容应该说满足了90%用户的需求，另外的10%，欢迎找我交流。 如果是采集PS4，记得<strong>关闭PS4的HDCP（此条适用于所有正规产商的采集卡）</strong></p>
+<span id="more"></span>
+
+
+<blockquote>
+<p><strong>驱动软件下载</strong></p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.elgato.com/en/gaming/downloads">官方公开的下载链接</a> Elgato的驱动是集捕获软件于一体的，所以略大。当然也有纯驱动版本。</p>
+<blockquote>
+<p><strong>驱动安装</strong></p>
+</blockquote>
+<p>安装驱动的通用法则：有勾打勾，有“是”选是；看到路径，默认；最后无脑下一步，个别除外。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1fry1sew9m7j30p80esgvb.jpg" srcset="/img/loading.gif" lazyload> Elgato Sound Capture，个人建议萌新不安装。</p>
+<blockquote>
+<p><strong>Game Capture HD界面介绍</strong></p>
+</blockquote>
+<p>Game Capture HD是Elgato官方的捕捉软件，可以用来录制、简单剪辑、直播。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1t3de5wj31h30tshdt.jpg" srcset="/img/loading.gif" lazyload> 通常情况下，只要看到采集画面（游戏机画面），已经可以正常使用。</p>
+<blockquote>
+<p><strong>录制功能详解</strong></p>
+</blockquote>
+<p>录制前记得调整资料库位置、文件导出位置，即可开始录制。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1t63zr7j30zv0lih0n.jpg" srcset="/img/loading.gif" lazyload> 如果录制游戏原画同时，嫌游戏声音小，请把“游戏音频”加到100 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1sf6kv9j30bm07674l.jpg" srcset="/img/loading.gif" lazyload> 如果要把解说也录制到原视频中，需要点亮“解说”按钮。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry4l7xwwvj30zw05k3zn.jpg" srcset="/img/loading.gif" lazyload> 如果你对默认设置下录出来的视频不满意，那就需要对设备属性进行一些调整。 主窗口右侧，点击 小齿轮即可打开属性设置面板 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry4l7ho2jj30kq0dvabu.jpg" srcset="/img/loading.gif" lazyload> 一切尽在图上。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1tb0iy3j30yn0gk111.jpg" srcset="/img/loading.gif" lazyload> HDMI颜色范围与各游戏机对应设置如下</p>
+<ul>
+<li>  PS4：     标准==限制，扩展==完整</li>
+<li>  Xbox：  标准==标准（推荐），扩展==电脑RGB</li>
+<li>  NS：      标准==Limited Range，扩展==Full Range</li>
+</ul>
+<p>颜色范围怎么选？没有标准答案，根据自己需求，自己测试后确定。 PS：<strong>每次调整质量滑块，采集卡都会重新获取数据，表现为：短暂黑屏后恢复，勿慌。</strong></p>
+<blockquote>
+<p><strong>导出录制的视频</strong></p>
+</blockquote>
+<p>因为个人导出需求不同，建议在导出前，对“共享”进行个性化设置。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1t7120lj30m40m3dj9.jpg" srcset="/img/loading.gif" lazyload> 如果你想让最后导出的<strong>MP4文件只有游戏声音****，那么就按照我上图的来勾选</strong>。</p>
+<blockquote>
+<p><strong>用Game Capture HD对视频进行简单剪辑</strong></p>
+</blockquote>
+<p>这个貌似没有需要补充的，一切看图即可。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry4lauj9ej30zn0k0qlc.jpg" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p><strong>用Game Capture HD直播</strong></p>
+</blockquote>
+<p>我个人的结论：在直播参数等同的前提下，Game Capture HD的直播体验，直播画面都比OBS差一些（国内外平台均是）。 所以，如果有直播需求的小伙伴，可以看我后文的OBS设置建议篇。 PS：此版本的Game Capture HD还有BUG，不能在场景上添加中文字符。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1tfghxij30o00d8jzj.jpg" srcset="/img/loading.gif" lazyload> Game Capture HD的RTMP协议这里有个蛋疼的地方：只能增、删，不能修改。 而国内好多家RTMP推流几乎都是 URL+密钥的方式，且每次直播开始时，密钥自动会变（也有不变的平台） <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1tg00e7j30ii09haci.jpg" srcset="/img/loading.gif" lazyload> 直播分辨率、直播帧数，根据不同的游戏来调整。萌新的话，建议分辨率720P，帧数30，码率2500-3500，即3Mbps左右。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1ftr1okarvij30a903mglk.jpg" srcset="/img/loading.gif" lazyload> 最后，如果你想让你的直播有麦克风的声音，记得 点亮“解说”，再开始“实时播放”。</p>
+<blockquote>
+<p><strong>其他设置补充</strong></p>
+</blockquote>
+<p><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1ftr1omjnymj30x90ffk68.jpg" srcset="/img/loading.gif" lazyload> <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1t9odq4j30l40evgmw.jpg" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p><strong>调整采集画面的亮度、对比度、饱和度、色相</strong></p>
+</blockquote>
+<p><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1tdcxozj30ye0hcamh.jpg" srcset="/img/loading.gif" lazyload> <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1tdoytij30lj0f8405.jpg" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p><strong>在OBS Studio中使用 HD60 Pro</strong></p>
+</blockquote>
+<p>在OBS主界面，“来源”Table内，右键-“添加”-“视频捕获设备”-“取一个自己能识别的名字” 然后属性按下图设置 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry4ld4cdhj30oz0ocqeu.jpg" srcset="/img/loading.gif" lazyload> 很多萌新，添加采集卡后，没有主机游戏声音，请排查OBS里所有关于音频的设置（每个人方法略有不同，细看你找的教程）。 OBS主窗口，【混音器】里找到采集卡（我这里是改了名字，不改的话，是“视频捕获设备”）再点小齿轮。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fttdrj94r0j30lz09z74z.jpg" srcset="/img/loading.gif" lazyload> 把采集卡的“音频检测”打开。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fttdrjg0elj30s80aj74i.jpg" srcset="/img/loading.gif" lazyload> 再补充一些关于采集卡属性设置的东西 FPS：除了双PC直播的用户（看情况设置），个人建议采集主机的玩家，都选择60. 关于颜色范围的问题，只能提供一个建议 如果是up主，那么建议录制两个颜色的视频，并按照你常用剪辑手法，剪辑导出后，上传到主要平台后对比效果 如果是主播，就国内平台而言，601、局部 相对比较通用，颜色不会偏差到不能看的地步。 如果声音有奇奇怪怪的问题，请将<strong>采集卡</strong>、<strong>播放</strong>、<strong>录制</strong>、<strong>OBS</strong>四者的音频格式统一。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1fry1st8gm7j30lj0efdmw.jpg" srcset="/img/loading.gif" lazyload> <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1so8ge5j30hb07lwf0.jpg" srcset="/img/loading.gif" lazyload> （就低原则） 因为HD60 Pro音频采样率是48000Hz，所以建议<strong>播放</strong>、<strong>录制</strong>、<strong>OBS 也设置为 48XXX.</strong> 总之，这里统一，只是为了降低发生翻车的几率。注意，此条方法是适用于所有音频相关的直播设备。 当然，有独立声卡的玩家，听声卡卖家的。</p>
+<blockquote>
+<p><strong>在Xsplit中使用 HD60 Pro</strong></p>
+</blockquote>
+<p>付费软件的好处是，可以完美兼容更多的硬件。如果不能完美兼容的话，也有很多官方技术文档可以参考 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1fry1spm4apj30me0np0xx.jpg" srcset="/img/loading.gif" lazyload> 在Xsplit中，可以直接添加HD60 Pro，然后调整窗口大小即可使用。但是，无论哪种方式，均会有一定概率产生“噼啪”声。 以下是我断断续续使用Xsplit一年来的经验分享（也会有噼啪声，只是少很多） 有时候直接添加HD60 Pro的话，帧率默认是30，需要手动调整。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1fry1sqrio2j30nb0fptgq.jpg" srcset="/img/loading.gif" lazyload> 设置采集软件的音频格式（音频采样率） <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1sre4e7j30ij0goq63.jpg" srcset="/img/loading.gif" lazyload> <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1fry1st8gm7j30lj0efdmw.jpg" srcset="/img/loading.gif" lazyload> 和OBS一样，统一音频采样率，降低音频事故。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1fry1sry22pj30nk09xmzj.jpg" srcset="/img/loading.gif" lazyload> WASAPI选项，只针对HD60 Pro用户，其他设备，不一定适用。而我的感受是：勾上后，“噼啪”声的问题，也偶有发生。</p>
+<blockquote>
+<p><strong>在Bandicam中使用 HD60 Pro？</strong></p>
+</blockquote>
+<p>不存在滴，已经Email给Bandicam，希望以后可以改善。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fry1svpmnlj30si0gytmd.jpg" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>** HD60 Pro在其他软件中的兼容性如何？**</p>
+</blockquote>
+<p>如果你说的其他软件指的是Potplayer、AmarecTV，那么我告诉你，别折腾了。 就直播、录制、直播+录制而言，没有什么功能是OBS、Xsplit、Game Capture HD 组合起来解决不了的，一块卡不行，那就两块。</p>
+<blockquote>
+<p><strong>延迟如何？</strong></p>
+</blockquote>
+<p>这不是一个完整的问题，我说0延迟，会有人不理解。 延迟取决于个人，以及游玩的游戏类型，受个人感官影响较大。这也是为啥我不放延迟数据的原因（我承认我懒）。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyreqhjzj30yp0n2qv5.jpg" srcset="/img/loading.gif" lazyload> 如图，采集卡上的OUT口，叫环出。 这个_OUT口输出到显示器（电视机）的画面  _与 <em>主机直接插显示器（电视机）的画面</em> <strong>没有任何差异。</strong> <strong>当然了，也会有一种用户：</strong> 他们只有1个显示器，恰好这个显示器只有1个HDMI输入接口，且这个HDMI接口是用来显示电脑的画面的 这种用户，玩游戏时，只能看OBS、Xsplit、Game Capture HD 的预览窗口 看预览窗口的体验自然是没有直接看“环出”信号舒服啦~ 但是，延迟这种东西，观众是完全感受不到滴（除非你设置不当，导致直播画面的音画不同步）。 在这里也给各位入坑的玩家一个建议，对帧数超级敏感的，不建议购买没有“环出”口的采集卡。</p>
+<blockquote>
+<p><strong>直播录制时，CPU、显卡占用如何？</strong></p>
+</blockquote>
+<p>如果指的是用<strong>Game Capture HD</strong>来直播、录制，那么我可以告诉你，<strong>CPU、显卡</strong>占用可以忽略不记。 我用我手里最差劲的电脑（i5 6500、HD530核显、）来测试的时候，是完全木有问题的。 因为拖延症的问题，当时的测试数据没了。 这里放上6800K、GTX970录制60Mbps（最高画质）时的参考数据 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftr3kq3nj1j30kx09245h.jpg" srcset="/img/loading.gif" lazyload> 得力于采集卡自带H.264硬件编码的原因，所以无论是录制、直播、录制+直播，各项占用都是灰常低的。 当然，这仅限于用<strong>Game Capture HD</strong>时的情况。如果你是用OBS来录制、直播，那OBS占用可就不同了。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A1%AC%E4%BB%B6%E4%BD%93%E9%AA%8C/">硬件体验</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Elgato/">Elgato</a>
+                    
+                      <a class="hover-with-bg" href="/tags/HD60/">HD60</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BD%95%E5%88%B6/">录制</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%9B%B4%E6%92%AD/">直播</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/4019/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">关于使用OBS NDI插件的一些建议</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/14536/">
+                        <span class="hidden-mobile">一次Bios更新引发的悲剧-涉及产品圆刚GC550</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
