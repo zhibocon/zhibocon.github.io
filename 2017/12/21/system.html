@@ -1,0 +1,533 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content=" 
+平时帮大小主播解决问题的时候发现：直播中出问题时，往往是系统作怪。
+所以，今天就讲讲原装系统的必要性，以及如何安装，维护。">
+  <meta name="author" content="比木">
+  <meta name="keywords" content="比木,Bimuakung,bimu.me,bimu.tv,bimu.live,直播控">
+  
+  <title>打造一台最适合用于直播的系统-Windows10 - 比木-工具人&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>比木-工具人's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-bug"></i>
+                实验室
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://live.bilibili.com/1214834">
+                    
+                    Bilibili直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.twitch.tv/bimuakung">
+                    
+                    Twitch直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://space.bilibili.com/38343840">
+                    
+                    斗鱼直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://space.bilibili.com/38343840">
+                    
+                    虎牙直播间
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="打造一台最适合用于直播的系统-Windows10">
+              
+                打造一台最适合用于直播的系统-Windows10
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2017-12-21 16:04" pubdate>
+        2017年12月21日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      15
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">打造一台最适合用于直播的系统-Windows10</h1>
+            
+            <div class="markdown-body">
+              <p> </p>
+<p>平时帮大小主播解决问题的时候发现：<strong>直播中出问题时，往往是系统作怪。</strong></p>
+<p>所以，今天就讲讲原装系统的必要性，以及如何安装，维护。</p>
+<span id="more"></span>
+
+<blockquote>
+<p><strong>吐槽</strong></p>
+</blockquote>
+<p>做直播，软件+硬件一堆东西加起来，是一个很复杂的生产环境。直播+游戏用的电脑，个人一律建议使用Windows原版的系统。 其他各种所谓精简版的系统，都是被制作的人改过这里，戳过那里的。他也许是处于好心，帮你精简。但是，他懂采集卡嘛？他懂声卡嘛?他懂直播需要怎么设置调整优化吗？他有足够的直播经验可供分享吗？我们要充分的信任微软爸爸，微软粑粑会故意坑害用户吗？ 所以，听我的。装原版的系统对于直播来说是最好的（也适用于其他情况。 <strong>原版系统能让你玩游戏、直播 99.99%的顺利！（我瞎编的数字，反正原版大法好）</strong></p>
+<h1 id="原版的系统-官方驱动-1个相对完美、稳定的直播环境"><a href="#原版的系统-官方驱动-1个相对完美、稳定的直播环境" class="headerlink" title="原版的系统+官方驱动=1个相对完美、稳定的直播环境"></a><strong>原版的系统+官方驱动=1个相对完美、稳定的直播环境</strong></h1><p> </p>
+<blockquote>
+<h2 id="1、原版系统去哪里下载？购买？"><a href="#1、原版系统去哪里下载？购买？" class="headerlink" title="1、原版系统去哪里下载？购买？"></a><strong>1、原版系统去哪里下载？购买？</strong></h2></blockquote>
+<p><a target="_blank" rel="noopener" href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a> 要下载，去上面的网址。别问为什么。 要购买，去<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/">微软中国官方网站</a>，他们会教你下载、安装、激活。  </p>
+<blockquote>
+<h2 id="2、具体该下载哪个？"><a href="#2、具体该下载哪个？" class="headerlink" title="2、具体该下载哪个？"></a>2、具体该下载哪个？</h2></blockquote>
+<p>文件名字 带VL（后期激活方便）、x64（选就对了这都8102年了），然后版本选最新的（图示，不一定是最新） <em>version 1803后，文件名有些许改变（此处更新于2018.07.31）。</em> <strong>Consumer editions</strong>包括：家庭版、教育版、专业版； <strong>Business editions</strong>包括：   企业版、教育版、专业版； <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fsgh2igeahj30vy0jawh7.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>上图是 Windows10 的下载示例。</p>
+<p>下载后，你会得到一个ISO结尾的文件，还是别管什么结尾了。反正你下载到的是一个4G大的文件就对了。你啥都别做。下载好放着。</p>
+<p>Windows10最新版（不定期更新</p>
+<p>发布时间2018-10-03</p>
+<p>ed2k://|file|cn_windows_10_consumer_edition_version_1803_updated_sep_2018_x64_dvd_a3fcbed0.iso|5293404160|0567CA96373A7B3475DD29371371A1A3|/</p>
+<blockquote>
+<h2 id="3、如何安装原版系统"><a href="#3、如何安装原版系统" class="headerlink" title="3、如何安装原版系统"></a>3、如何安装原版系统</h2></blockquote>
+<p>如果电脑小白毫无动手能力，建议找周围会修电脑不过夜的肥哥哥帮你装。 如果周围没有会修电脑的肥哥哥，况且你电脑配置比较不错的话，联系我。远程付费安装、调试。（不再提供此帮助，自2018年3月起）</p>
+<h3 id="安装前，无论如何记得备份你电脑里有用的东西"><a href="#安装前，无论如何记得备份你电脑里有用的东西" class="headerlink" title="安装前，无论如何记得备份你电脑里有用的东西"></a><strong>安装前，无论如何记得备份你电脑里有用的东西</strong></h3><h3 id="难说会出罕见错误，导致你硬盘空无一物。不过苍老师都结婚了。哎"><a href="#难说会出罕见错误，导致你硬盘空无一物。不过苍老师都结婚了。哎" class="headerlink" title="难说会出罕见错误，导致你硬盘空无一物。不过苍老师都结婚了。哎"></a>难说会出罕见错误，导致你硬盘空无一物。不过苍老师都结婚了。哎</h3><p><strong>绝对通用的安装办法：</strong><a target="_blank" rel="noopener" href="https://www.iplaysoft.com/windows-10-udisk-install.html">简单几步制作 Windows 10 正式版U盘可启动安装盘图文教程 (全新安装Win10)</a> 这个方法是绝对绝对通用的，烂到家的电脑，好到天的电脑，都可以按照这个方法来安装系统。前提：有个4GB 以上的U盘 安装的时候，选择“专业版”，即Professional 专业版：VK7JG-NPHTM-C97JM-9MPGT-3V66T 如果对系统盘符的大小，有<strong>强迫症</strong>的，比如分区必须是整数。如60GB，不是59.96GB。那么去看这篇：<a target="_blank" rel="noopener" href="https://www.iplaysoft.com/p/howto-calculate-partition-size">Windows 10 怎样计算硬盘整数分区</a> <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fsgh2iov1vj30ey03ot8m.jpg" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<h2 id="4、如何激活系统"><a href="#4、如何激活系统" class="headerlink" title="4、如何激活系统"></a>4、如何激活系统</h2></blockquote>
+<p>那我先给你列举下，不激活Windows 10的话，有哪些限制？</p>
+<p>不激活的限制</p>
+<ul>
+<li>  桌面右下角会有水印，不影响游戏。</li>
+<li>  不允许修改桌面背景</li>
+<li>  不允许修改系统颜色</li>
+<li>  不允许修改主题</li>
+</ul>
+<p>除上述限制之外，Windows<strong>所有系统功能，没有时间限制。均可正常使用</strong>。 <strong>总而言之，不激活，并不会影响你直播+游戏（你看总监的桌面。未激活的水印大大的）。</strong> 什么，听了这个，你还是<strong>想激活</strong>？？？？ 噢，那就看这里吧  <a target="_blank" rel="noopener" href="https://03k.org/kms.html">一句命令激活windows/office</a> 如果你下载的，不是我上述举例的安装镜像，那么~可能无法激活，试试无妨。</p>
+<blockquote>
+<h2 id="5、如何安装驱动"><a href="#5、如何安装驱动" class="headerlink" title="5、如何安装驱动"></a>5、如何安装驱动</h2></blockquote>
+<h2 id="任何驱动的安装，除非特意说明，否则，安装时候请保持路劲默认！"><a href="#任何驱动的安装，除非特意说明，否则，安装时候请保持路劲默认！" class="headerlink" title="任何驱动的安装，除非特意说明，否则，安装时候请保持路劲默认！"></a><strong>任何驱动的安装，除非特意说明，否则，安装时候请保持路劲默认！</strong></h2><h4 id="此条适用于：声卡、显卡、采集卡、耳机、鼠标、其他任何硬件。"><a href="#此条适用于：声卡、显卡、采集卡、耳机、鼠标、其他任何硬件。" class="headerlink" title="此条适用于：声卡、显卡、采集卡、耳机、鼠标、其他任何硬件。"></a><strong>此条适用于：声卡、显卡、采集卡、耳机、鼠标、其他任何硬件。</strong></h4><p><a target="_blank" rel="noopener" href="http://help.jjboom.com/kb/original/1546.html">关于驱动问题，看这篇就够了。这篇文章理念和我本人100%相同（这次不是瞎编了）</a> <a target="_blank" rel="noopener" href="https://jjboom.taobao.com/">买电脑</a>的也可以去他们家买。说需求，买。有任何问题，找他们。我个人还是比较信赖狗大V的（微博@性感玉米）。 显卡驱动的更新，可以自动更新，也可以手动下载： <a target="_blank" rel="noopener" href="https://www.geforce.cn/drivers">NVIDIA官方网站</a> <a target="_blank" rel="noopener" href="http://support.amd.com/zh-cn/download/">AMD 显卡驱动官网下载</a></p>
+<blockquote>
+<h2 id="6、直播电脑上，1000-不建议安装的软件"><a href="#6、直播电脑上，1000-不建议安装的软件" class="headerlink" title="6、直播电脑上，1000%不建议安装的软件"></a>6、直播电脑上，1000%<strong>不建议安装的软件</strong></h2></blockquote>
+<ul>
+<li>  XX卫士系列、XX加速球、X大师、X优化卫士都不建议安装</li>
+<li>  国内一切看视频的客户端也不建议安装，尽量用网页端，看完关闭视频所在的网页</li>
+<li>  至于迅雷，之前有传言，它会开着进程，并一直上传东西（因为我不用迅雷，所以不知道现在的版本情况）</li>
+<li>  不建议安装的原因很多。当然了，你的开心是最重要的，要装的话也没人拦着你</li>
+</ul>
+<blockquote>
+<h2 id="7、最好用的软件推荐"><a href="#7、最好用的软件推荐" class="headerlink" title="7、最好用的软件推荐"></a>7、<a target="_blank" rel="noopener" href="https://amazing-apps.gitbooks.io/windows-apps-that-amaze-us/zh-CN/"><strong>最好用的软件推荐</strong></a></h2></blockquote>
+<h2 id="最好用的软件推荐，根据自己需求下载吧。"><a href="#最好用的软件推荐，根据自己需求下载吧。" class="headerlink" title="最好用的软件推荐，根据自己需求下载吧。"></a><a target="_blank" rel="noopener" href="https://amazing-apps.gitbooks.io/windows-apps-that-amaze-us/zh-CN/"><strong>最好用的软件推荐</strong></a>，根据自己需求下载吧。</h2><p> </p>
+<blockquote>
+<h2 id="8、更换主板后，依旧可以激活（2018-0314补充）"><a href="#8、更换主板后，依旧可以激活（2018-0314补充）" class="headerlink" title="8、更换主板后，依旧可以激活（2018.0314补充）"></a>8、更换主板后，依旧可以激活（<strong>2018.0314补充</strong>）</h2></blockquote>
+<p><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fsgh2iwnahj30kv0ewwgq.jpg" srcset="/img/loading.gif" lazyload> 相关微博地址：<a target="_blank" rel="noopener" href="https://m.weibo.cn/status/4130116784673795">https://m.weibo.cn/status/4130116784673795</a></p>
+<blockquote>
+<h2 id="9、程序启动出错？缺少-DLL-文件？到底是什么问题？"><a href="#9、程序启动出错？缺少-DLL-文件？到底是什么问题？" class="headerlink" title="9、程序启动出错？缺少 DLL 文件？到底是什么问题？"></a>9、程序启动出错？缺少 DLL 文件？到底是什么问题？</h2></blockquote>
+<p>下载<a target="_blank" rel="noopener" href="https://www.computerbase.de/downloads/systemtools/all-in-one-runtimes/">All in One Runtimes</a>可以解决（<strong>2018.08.11补充</strong>） All in One Runtimes介绍：<a target="_blank" rel="noopener" href="https://www.iplaysoft.com/aio-runtimes.html">https://www.iplaysoft.com/aio-runtimes.html</a> <strong>2018.09.21再次补充</strong> 游戏运行库，建议使用小幸姐做的版本。下载链接自行搜索。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/">软件分享</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Windows10/">Windows10</a>
+                    
+                      <a class="hover-with-bg" href="/tags/U%E7%9B%98/">U盘</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Windows7/">Windows7</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8E%9F%E7%89%88%E7%B3%BB%E7%BB%9F/">原版系统</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">系统安装</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2017/12/22/windows10-update.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Windows10安装后如何关闭自动更新</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2017/12/20/streaming.html">
+                        <span class="hidden-mobile">直播用的电脑应该如何配？</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
