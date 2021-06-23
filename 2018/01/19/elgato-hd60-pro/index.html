@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="在这之前，我已经有一块能采集1080P@60fps的采集卡了：圆钢GC550。再买Elgato HD60 PRO是因为当初看5tat（Youtube一个大胡子主播）直播战地1的时候，在评论里知道了Elgato这个品牌。在Youtube看了很多开箱评测后，义无反顾的海淘买了1块回来玩（这期间太辛酸了，路过）。 当时对我吸引力最大的，除了其德国工艺外，还有H.264硬件编码功能。">
+  <meta name="author" content="比木">
+  <meta name="keywords" content="比木,Bimuakung,bimu.me,bimu.tv,bimu.live,直播控">
+  
+  <title>Elgato HD60 PRO开箱-伊卡图采集卡 - 比木-工具人&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>比木-工具人's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-bug"></i>
+                实验室
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://live.bilibili.com/1214834">
+                    
+                    Bilibili直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.twitch.tv/bimuakung">
+                    
+                    Twitch直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://space.bilibili.com/38343840">
+                    
+                    斗鱼直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://space.bilibili.com/38343840">
+                    
+                    虎牙直播间
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Elgato HD60 PRO开箱-伊卡图采集卡">
+              
+                Elgato HD60 PRO开箱-伊卡图采集卡
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-01-19 14:25" pubdate>
+        2018年1月19日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      978 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Elgato HD60 PRO开箱-伊卡图采集卡</h1>
+            
+            <div class="markdown-body">
+              <p>在这之前，我已经有一块能采集1080P@60fps的采集卡了：圆钢GC550。再买Elgato HD60 PRO是因为当初看5tat（Youtube一个大胡子主播）直播战地1的时候，在评论里知道了Elgato这个品牌。在Youtube看了很多开箱评测后，义无反顾的海淘买了1块回来玩（这期间太辛酸了，路过）。 当时对我吸引力最大的，除了其德国工艺外，还有<strong>H.264硬件编码功能。</strong></p>
+<span id="more"></span>
+
+
+<p>买来至今，已经使用了3个月，使用体检极好。终于可以放心大胆的在此安利。（2018.03.27更新）</p>
+<p>  <strong>产品关键词：德国工艺、自带H.264硬件编码、OUT环出、PCIE数据传输接口、超低延迟、。</strong></p>
+<blockquote>
+<p>开箱</p>
+</blockquote>
+<p><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqbjuglj30zk0npgpq.jpg" srcset="/img/loading.gif" lazyload> <strong>正面</strong>，纸盒包装，简洁且科技感十足（<a target="_blank" rel="noopener" href="https://www.elgato.com/">官网</a>也是）。包装有覆膜，这是我破膜后的样子。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqci524j30zk0npaex.jpg" srcset="/img/loading.gif" lazyload> <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1frwyqdgm9ig30tn0cd42s.gif" srcset="/img/loading.gif" lazyload></p>
+<p>（安装需求、技术规格、产品附件）</p>
+<p><strong>背面</strong>，上方是Elgato配套软件（Game Capture for Windows）的截图，中下是技术规格； <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqez73lj30zk0np0yr.jpg" srcset="/img/loading.gif" lazyload> <strong>底部</strong>，标注了仅支持Windows、支持13种语言、以及可采集的设备</p>
+<p>（原理上，有HDMI输出的设备，再配合HDCP解密盒，应该都可以被采集卡采集内容）</p>
+<p>至于Twitch、YouTube为啥要标注，我猜测是因为市场面向问题，也可能是因为Elgato配套软件支持直接推流到上述两个站点吧 PS：Elgato配套软件（Game Capture for Windows）也支持国内较为常见的_RTMP_推流协议，比如斗鱼、熊猫、B站…… <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqfxiucj30zk0nptca.jpg" srcset="/img/loading.gif" lazyload><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1frwyqgu5vij30zk0npgr0.jpg" srcset="/img/loading.gif" lazyload> 侧抽即可取出内胆， 打开内胆纸盒，终于看到主角。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqhq0o7j30zk0npwj9.jpg" srcset="/img/loading.gif" lazyload> 从左到右（上到下），分别是 HDMI线、说明书（11种语言）、挡板、信仰贴、**Elgato **HD60 PRO实体 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1frwyqiqfgpj30zk0np79a.jpg" srcset="/img/loading.gif" lazyload> 永远不会看的说明书（没有中文），当然Elgato官网<a target="_blank" rel="noopener" href="https://gaming.help.elgato.com/">Support页面</a>也有十分详尽的使用教程 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqjd66ej30pg0eh41l.jpg" srcset="/img/loading.gif" lazyload> <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqk4f0gj30zk0npae4.jpg" srcset="/img/loading.gif" lazyload> 好感度+1 有木有！小钢炮最爱（至于这个怎么用，我后面有说明，嫑急）。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqkxo4vj30zk0np426.jpg" srcset="/img/loading.gif" lazyload> 没研究HDMI上面的含义。我属于实践党，拿到东西，插上去就是干，不行就换，再不行就买、再换。</p>
+<p>插一句题外话：接头镀金真的会好很多嘛？</p>
+<p>买了那么多数码产品，附赠都没遇见过插头镀金呢。懂的大佬不妨评论里告诉我下，笔芯心。</p>
+<p><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqlpfslj30zk0np0wt.jpg" srcset="/img/loading.gif" lazyload> **Elgato **HD60 PRO 正面，看着是不是很大？ <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqmifh9j30zk0np42u.jpg" srcset="/img/loading.gif" lazyload> 这样一对比呢，还大吗？</p>
+<blockquote>
+<p>  <strong>安装</strong></p>
+</blockquote>
+<p><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyqubw7oj30z90ndhdt.jpg" srcset="/img/loading.gif" lazyload>   如果是小钢炮，多半需要换挡板（板拆掉原装挡板上的两颗螺丝，把小的这个挡板换上，再拧紧螺丝即可） <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyr2vamij30ze0nfkjl.jpg" srcset="/img/loading.gif" lazyload> 采集卡插哪里？上图1、2、3 指的几个地方都可以插。我的建议是，见缝就插吧。 严肃一点的说法是： 如果你是多显卡交配党，那么建议去看主板的说明书，每个插槽的速度都有说明。</p>
+<p>（**Elgato **HD60 PRO在PCIe x1/x4/x8/x16/插槽下都能用）</p>
+<p>我的建议是： 先随手插上，然后进系统装<strong>Elgato <strong>HD60 PRO的驱动，根据我推荐的设置参数用一段时间。有问题就换其他插槽（实践出真知）。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1frwyr4iklsj30zk0np104.jpg" srcset="/img/loading.gif" lazyload> <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyr5vhb3j30zk0np7aa.jpg" srcset="/img/loading.gif" lazyload> 主板的不同，导致可以插的地方也不同，像我就机智的插显卡后面。（我喜欢后边） <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyreqhjzj30yp0n2qv5-1.jpg" srcset="/img/loading.gif" lazyload> 采集卡上的OUT口，叫环出。 这个_OUT口输出到显示器（电视机）的画面  _与 <em>主机直接插显示器（电视机）的画面</em> <strong>没有任何差异</strong> <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1frwyrfw23cj30zk0np79r.jpg" srcset="/img/loading.gif" lazyload> 采集卡内部安装完成后 <strong>将游戏机（此处以PS4为例）的HDMI输出</strong>接口</strong>插到采集卡的 “IN”口</strong>。硬件的安装工作彻底完成。 未填的坑： 驱动的下载、安装（放到微云）； **Elgato **HD60 PRO在OBS下设置推荐参数； Game Capture for Windows 的经验分享（不录制系统声音，只录制游戏机，安利给视频主） CPU零占用录PC游戏；</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A1%AC%E4%BB%B6%E4%BD%93%E9%AA%8C/">硬件体验</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/1080P/">1080P</a>
+                    
+                      <a class="hover-with-bg" href="/tags/H-264/">H.264</a>
+                    
+                      <a class="hover-with-bg" href="/tags/HD60-PRO/">HD60 PRO</a>
+                    
+                      <a class="hover-with-bg" href="/tags/PCIE/">PCIE</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BE%B7%E5%9B%BD%E5%B7%A5%E8%89%BA/">德国工艺</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%B6%85%E4%BD%8E%E5%BB%B6%E8%BF%9F/">超低延迟</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2018/01/21/hdmi-1-4-2-0-2-0a-2-0b-2-1/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Xbox 、HDMI各版本区别</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2017/12/25/video-capture-card/">
+                        <span class="hidden-mobile">直播主机游戏需要哪些设备？（Ps4、xbox、Switch、wiiu）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
