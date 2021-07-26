@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="2018年10月12日更新：此篇有些细节有问题，改前记得拍照备份改的内容。完善后，会去掉这个tips。 宽带如果是：电信、联通、移动，一般情况下，不需要任何操作，都可以获得良好的下载速度； 如果速度不理想，可以更改PS4、Xbox的DNS为 119.29.29.29_或者_114.114.114.114 ； 如果改了DNS后，速度一段时间后慢下来，可以尝试重启拨号设备：路由器、光猫； PS：不知道">
+  <meta name="author" content="比木">
+  <meta name="keywords" content="比木,Bimuakung,bimu.me,bimu.tv,bimu.live,直播控">
+  
+  <title>xbox、PS4游戏下载慢、下载断断续续解决办法 - 比木-工具人&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"bimu.moe","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>比木-工具人's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-bug"></i>
+                实验室
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://live.bilibili.com/1214834">
+                    
+                    Bilibili直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.twitch.tv/bimuakung">
+                    
+                    Twitch直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://space.bilibili.com/38343840">
+                    
+                    斗鱼直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://space.bilibili.com/38343840">
+                    
+                    虎牙直播间
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="xbox、PS4游戏下载慢、下载断断续续解决办法">
+              
+                xbox、PS4游戏下载慢、下载断断续续解决办法
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-03-28 09:57" pubdate>
+        2018年3月28日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      700 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">xbox、PS4游戏下载慢、下载断断续续解决办法</h1>
+            
+            <div class="markdown-body">
+              <p><strong>2018年10月12日更新：此篇有些细节有问题，改前记得拍照备份改的内容。完善后，会去掉这个tips。</strong> 宽带如果是：电信、联通、移动，一般情况下，不需要任何操作，都可以获得良好的下载速度； 如果速度不理想，可以更改PS4、Xbox的DNS为 <em>119.29.29.29_或者_114.114.114.114 ；</em> 如果改了DNS后，速度一段时间后慢下来，可以尝试重启拨号设备：路由器、光猫； PS：不知道用哪个拨号的，可以直接将光猫、路由器都关闭电源，20秒后再开启；</p>
+<span id="more"></span>
+
+<h2 id="今天讲的主要是为了获得极致的下载速度"><a href="#今天讲的主要是为了获得极致的下载速度" class="headerlink" title="今天讲的主要是为了获得极致的下载速度"></a><strong>今天讲的主要是为了获得极致的下载速度</strong></h2><p>下图是修改后的实际下载效果（本人联通100M光纤） <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fsf2xh6vx5j30wt0l441o.jpg" srcset="/img/loading.gif" lazyload> </p>
+<blockquote>
+<p><strong>2018.0819更新Padavan下对于Xbox的设置方法</strong></p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhibocon.com/wp-content/uploads/2018/03/DNSXbox.png"><img src="https://zhibocon.com/wp-content/uploads/2018/03/DNSXbox.png" srcset="/img/loading.gif" lazyload></a> 重定向DNS打开，并设置比较流行的公共DNS即可（测试环境有限，仅供参考）</p>
+<blockquote>
+<p><strong>单独针对Xbox的设置方法</strong></p>
+</blockquote>
+<p>请到<a target="_blank" rel="noopener" href="https://www.xbox-skyer.com/topic/50/xbox-one-%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E6%85%A2-%E6%80%8E%E4%B9%88%E5%8A%9E">xbox-skyer</a> 下载工具，并按照提示操作，此工具需在PC上操作。</p>
+<blockquote>
+<p><strong>PS4、Xbox都通用的方法</strong></p>
+</blockquote>
+<p>此方法需路由器固件是：梅林、Padavan（老毛子固件）、或其他固件。 <strong>路由器为梅林固件时设置方法</strong> 在梅林软件中心，安装XX上网插件，然后找到类似如图的地方，对**<em>自定义dnsmasq</em>**进行设定。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fsf2xhqwn6j30gx0g8js5.jpg" srcset="/img/loading.gif" lazyload> 复制的时候，只复制下方蓝色部分内容，最终代码如上图</p>
+<p><strong>PS4</strong><br>address=/zeus.dl.playstation.net/124.167.219.208<br>address=/ares.dl.playstation.net/60.210.22.171<br>address=/poseidon.dl.playstation.net/60.10.118.25<br>address=/gs2.ww.prod.dl.playstation.net/112.90.222.7</p>
+<p><strong>Xbox</strong><br>address=/assets1.xboxlive.com/221.204.171.44<br>address=/assets2.xboxlive.com/221.204.171.44<br>address=/dlassets.xboxlive.com/221.204.171.44<br>address=/download.xbox.com/221.204.171.44<br>address=/download.xboxlive.com/221.204.171.44 </p>
+<blockquote>
+<p><strong>Padavan（老毛子固件）</strong></p>
+</blockquote>
+<p>内部网络 (LAN) – DHCP 服务器-自定义配置文件hosts <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fsf2xi8m99j30j50afq32.jpg" srcset="/img/loading.gif" lazyload></p>
+<p> <strong>PS4</strong><br>124.167.219.208 zeus.dl.playstation.net<br>60.210.22.171 ares.dl.playstation.net<br>60.10.118.25 poseidon.dl.playstation.net<br>112.90.222.7 gs2.ww.prod.dl.playstation.net</p>
+<p><strong>Xbox</strong><br>221.204.171.44 assets1.xboxlive.com<br>221.204.171.44 assets2.xboxlive.com<br>221.204.171.44 dlassets.xboxlive.com<br>221.204.171.44 download.xbox.com<br>221.204.171.44 download.xboxlive.com</p>
+<blockquote>
+<p><strong>特别提示</strong></p>
+</blockquote>
+<p>由于IP地址可能存在时效性，所以如果你直接复制上述的地址，可能会发生下载速度为0的情况。 那么如何手动替换IP地址呢？ <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fsgc2dl916j30gx08pjtq.jpg" srcset="/img/loading.gif" lazyload> 复制上图圈里的网址（一次复制1行） 打开“<a target="_blank" rel="noopener" href="https://www.ipip.net/ping.php">https://www.ipip.net/ping.php</a>”，勾选“中国”，点击“Ping” <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fsgc2dwasmj30u705zmy5.jpg" srcset="/img/loading.gif" lazyload> 在“响应IP”里，复制一个距离自己比较近的IP替换即可。</p>
+<p>比如，我本人坐标在成都，且宽带是联通。<br>搜索“联通”2字，然后看右侧的“响应IP”有很多联通的，我再选一个距离成都比较近的即可。<br>这里没有绝对性，需要自己实践。<br><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1fsgc2ewxe8j30xj0ixteg.jpg" srcset="/img/loading.gif" lazyload></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/">软件分享</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Padavan/">Padavan</a>
+                    
+                      <a class="hover-with-bg" href="/tags/PS4/">PS4</a>
+                    
+                      <a class="hover-with-bg" href="/tags/xbox/">xbox</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Dnsmasq/">Dnsmasq</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%8B%E8%BD%BD%E6%85%A2/">下载慢</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%AE%89%E8%A3%85%E5%81%9C%E6%AD%A2/">安装停止</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%A2%85%E6%9E%97/">梅林</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/14536/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">一次Bios更新引发的悲剧-涉及产品圆刚GC550</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/30061/">
+                        <span class="hidden-mobile">主机挂加速器有哪些办法？</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,494 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="比木,一个专业折腾直播的工具人。一个看直播、玩游戏、也自己直播且自带泳圈的阿宅">
+  <meta name="author" content="比木">
+  <meta name="keywords" content="比木,Bimuakung,bimu.me,bimu.tv,bimu.live,直播控">
+  
+  <title>让主机游戏满速下载！让视频加载更快！老毛子Padavan固件下Smartdns使用方法分享 - 比木-工具人&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"bimu.moe","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>比木-工具人's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-bug"></i>
+                实验室
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://live.bilibili.com/1214834">
+                    
+                    Bilibili直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.twitch.tv/bimuakung">
+                    
+                    Twitch直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://space.bilibili.com/38343840">
+                    
+                    斗鱼直播间
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://space.bilibili.com/38343840">
+                    
+                    虎牙直播间
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="让主机游戏满速下载！让视频加载更快！老毛子Padavan固件下Smartdns使用方法分享">
+              
+                让主机游戏满速下载！让视频加载更快！老毛子Padavan固件下Smartdns使用方法分享
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-01 23:40" pubdate>
+        2021年7月1日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      745 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      7
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">让主机游戏满速下载！让视频加载更快！老毛子Padavan固件下Smartdns使用方法分享</h1>
+            
+            <div class="markdown-body">
+              <p>使用SmartDNS可以改善Origin、Steam、Xbox、育碧等平台下载游戏慢的现象，让其达到正常能用的水平。</p>
+<p>纯Windows平台玩家推荐使用UsbEAm Hosts Editor，可以很方便的就达到提速效果。</p>
+<p>SmartDNS除了可以让下载有速度外，对于视频网站的视频加载也有一定改善，尤其是小运营商的用户。</p>
+<hr>
+<h3 id="视频版地址"><a href="#视频版地址" class="headerlink" title="视频版地址"></a>视频版地址</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18f4y1j7EF/">Bilibili 让主机游戏满速下载！让视频加载更快！</a></p>
+<p><a target="_blank" rel="noopener" href="https://youtu.be/atgkEl-t9EM">YouTube  让主机游戏满速下载！让视频加载更快！</a></p>
+<hr>
+<h3 id="为什么选择Smartdns？"><a href="#为什么选择Smartdns？" class="headerlink" title="为什么选择Smartdns？"></a>为什么选择Smartdns？</h3><p>玩游戏也许都知道这款神器：<a target="_blank" rel="noopener" href="https://www.dogfight360.com/blog/475/">UsbEAm Hosts Editor</a>，通过这款神器，可以一定程度上解决各式各样的下载问题。</p>
+<p>UsbEAm Hosts Editor目前仅支持Windows平台，如果你要在其他平台使用的话，得有超强的动手能力。</p>
+<p>我自己的解决方案就是把实现类似效果的工具直接放到了路由器上！即今天要分享的 Smartdns。</p>
+<p>只要我们的设备接入了路由器，就可以在不修改任何配置的情况下，实现各平台的加速下载～</p>
+<hr>
+<h3 id="简单的效果展示"><a href="#简单的效果展示" class="headerlink" title="简单的效果展示"></a>简单的效果展示</h3><p><img src="https://i.loli.net/2021/07/26/enuaoOBbHJrEcwM.png" srcset="/img/loading.gif" lazyload></p>
+<p>这个是我下载育碧的看门狗的速度，仅有15MB/s。速度是我宽带的50%。</p>
+<p>PC上不怎么玩育碧的游戏，所以不太清楚这边的下载质量是如何的？</p>
+<p>至于<strong>Xbox</strong>的速度，我视频里有提到，简单的结论就是有效果（且PC版的Xbox App里下载游戏速度也有提升）</p>
+<p><strong>Playstation</strong>商店，因为在国内有稳定的CDN，所以下载速度一直都很稳。不开Smartdns的时候，商店里的游戏图片加载慢。开了后，顺滑很多。系统更新速度也很快。</p>
+<p><strong>NS</strong>上下载游戏的速度？</p>
+<p>据我记忆中，有略微提升。但是不明显。截止目前，非国行的机器下载依旧走的是海外的服务器。</p>
+<hr>
+<h3 id="Smartdns在路由器上的设置"><a href="#Smartdns在路由器上的设置" class="headerlink" title="Smartdns在路由器上的设置"></a>Smartdns在路由器上的设置</h3><ul>
+<li>路由器 红米的2100</li>
+<li>固件  chongshengB大佬的 <a target="_blank" rel="noopener" href="https://github.com/chongshengB/rt-n56u/releases">https://github.com/chongshengB/rt-n56u/releases</a></li>
+</ul>
+<p>刷了上述固件后，在路由器管理后台，找到找到Smartdns，DNS加速先不启用。</p>
+<p>打开“上游服务器”，在里面添加常用的国内外DNS</p>
+<p><img src="https://i.loli.net/2021/07/26/GdXvNahOYjoDZsz.png" srcset="/img/loading.gif" lazyload alt="WX"></p>
+<p><strong>把下方图中左侧的添加到右侧</strong><img src="https://i.loli.net/2021/07/26/j1Pc9b4w3vEFIpM.png" srcset="/img/loading.gif" lazyload alt="smartdns5"></p>
+<p>有一组参数必须增加</p>
+<p>根据自己所在地、所用的运营商，添加对应宽带运营商的DNS到路由器的上游服务器内</p>
+<p>查询所在地、所用的运营商DNS：<a target="_blank" rel="noopener" href="https://www.ip.cn/dns.html">https://www.ip.cn/dns.html</a></p>
+<p><img src="https://i.loli.net/2021/07/26/gQ8HYdNCZbK6VBz.png" srcset="/img/loading.gif" lazyload alt="smartdns4"></p>
+<p>（添加完成后的效果）</p>
+<p>“上游服务器“设置完毕后，回到”基础设置“页面，以下为参考设置：</p>
+<p><img src="https://i.loli.net/2021/07/26/4rYGPxt3OokLwiy.png" srcset="/img/loading.gif" lazyload alt="smartdns3"></p>
+<p><img src="https://i.loli.net/2021/07/26/728zYAFoqdxfBWJ.png" srcset="/img/loading.gif" lazyload alt="smartdns2"></p>
+<p>修改完毕后记得“应用设置”，最后开启“DNS加速”的开关。</p>
+<p><strong>验证是否有加速成功</strong></p>
+<p><img src="https://i.loli.net/2021/07/26/WcRkjGbngU2oHaA.png" srcset="/img/loading.gif" lazyload alt="smartdns1"></p>
+<p>在电脑上运行命令行窗口，输入 nslookup <a target="_blank" rel="noopener" href="http://bimu.tv/">bimu.tv</a>  如果看到返回了看是否得到这样的值。那说明加速成功。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Padavan/">Padavan</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Smartdns/">Smartdns</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/b2257b05/">
+                        <span class="hidden-mobile">禁止Windows10自动升级</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
