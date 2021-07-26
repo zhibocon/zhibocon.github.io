@@ -4,6 +4,48 @@
   
   
   <entry>
+    <title>让主机游戏满速下载！让视频加载更快！老毛子Padavan固件下Smartdns使用方法分享</title>
+    <link href="/posts/51466.html"/>
+    <url>/posts/51466.html</url>
+    
+    <content type="html"><![CDATA[<p>使用SmartDNS可以改善Origin、Steam、Xbox、育碧等平台下载游戏慢的现象，让其达到正常能用的水平。</p><p>纯Windows平台玩家推荐使用UsbEAm Hosts Editor，可以很方便的就达到提速效果。</p><p>SmartDNS除了可以让下载有速度外，对于视频网站的视频加载也有一定改善，尤其是小运营商的用户。</p><hr><h3 id="视频版地址"><a href="#视频版地址" class="headerlink" title="视频版地址"></a>视频版地址</h3><p><a href="https://www.bilibili.com/video/BV18f4y1j7EF/">Bilibili 让主机游戏满速下载！让视频加载更快！</a></p><p><a href="https://youtu.be/atgkEl-t9EM">YouTube  让主机游戏满速下载！让视频加载更快！</a></p><hr><h3 id="为什么选择Smartdns？"><a href="#为什么选择Smartdns？" class="headerlink" title="为什么选择Smartdns？"></a>为什么选择Smartdns？</h3><p>玩游戏也许都知道这款神器：<a href="https://www.dogfight360.com/blog/475/">UsbEAm Hosts Editor</a>，通过这款神器，可以一定程度上解决各式各样的下载问题。</p><p>UsbEAm Hosts Editor目前仅支持Windows平台，如果你要在其他平台使用的话，得有超强的动手能力。</p><p>我自己的解决方案就是把实现类似效果的工具直接放到了路由器上！即今天要分享的 Smartdns。</p><p>只要我们的设备接入了路由器，就可以在不修改任何配置的情况下，实现各平台的加速下载～</p><hr><h3 id="简单的效果展示"><a href="#简单的效果展示" class="headerlink" title="简单的效果展示"></a>简单的效果展示</h3><p><img src="https://i.loli.net/2021/07/26/enuaoOBbHJrEcwM.png"></p><p>这个是我下载育碧的看门狗的速度，仅有15MB/s。速度是我宽带的50%。</p><p>PC上不怎么玩育碧的游戏，所以不太清楚这边的下载质量是如何的？</p><p>至于<strong>Xbox</strong>的速度，我视频里有提到，简单的结论就是有效果（且PC版的Xbox App里下载游戏速度也有提升）</p><p><strong>Playstation</strong>商店，因为在国内有稳定的CDN，所以下载速度一直都很稳。不开Smartdns的时候，商店里的游戏图片加载慢。开了后，顺滑很多。系统更新速度也很快。</p><p><strong>NS</strong>上下载游戏的速度？</p><p>据我记忆中，有略微提升。但是不明显。截止目前，非国行的机器下载依旧走的是海外的服务器。</p><hr><h3 id="Smartdns在路由器上的设置"><a href="#Smartdns在路由器上的设置" class="headerlink" title="Smartdns在路由器上的设置"></a>Smartdns在路由器上的设置</h3><ul><li>路由器 红米的2100</li><li>固件  chongshengB大佬的 <a href="https://github.com/chongshengB/rt-n56u/releases">https://github.com/chongshengB/rt-n56u/releases</a></li></ul><p>刷了上述固件后，在路由器管理后台，找到找到Smartdns，DNS加速先不启用。</p><p>打开“上游服务器”，在里面添加常用的国内外DNS</p><p><img src="https://i.loli.net/2021/07/26/GdXvNahOYjoDZsz.png" alt="WX"></p><p><strong>把下方图中左侧的添加到右侧</strong><img src="https://i.loli.net/2021/07/26/j1Pc9b4w3vEFIpM.png" alt="smartdns5"></p><p>有一组参数必须增加</p><p>根据自己所在地、所用的运营商，添加对应宽带运营商的DNS到路由器的上游服务器内</p><p>查询所在地、所用的运营商DNS：<a href="https://www.ip.cn/dns.html">https://www.ip.cn/dns.html</a></p><p><img src="https://i.loli.net/2021/07/26/gQ8HYdNCZbK6VBz.png" alt="smartdns4"></p><p>（添加完成后的效果）</p><p>“上游服务器“设置完毕后，回到”基础设置“页面，以下为参考设置：</p><p><img src="https://i.loli.net/2021/07/26/4rYGPxt3OokLwiy.png" alt="smartdns3"></p><p><img src="https://i.loli.net/2021/07/26/728zYAFoqdxfBWJ.png" alt="smartdns2"></p><p>修改完毕后记得“应用设置”，最后开启“DNS加速”的开关。</p><p><strong>验证是否有加速成功</strong></p><p><img src="https://i.loli.net/2021/07/26/WcRkjGbngU2oHaA.png" alt="smartdns1"></p><p>在电脑上运行命令行窗口，输入 nslookup <a href="http://bimu.tv/">bimu.tv</a>  如果看到返回了看是否得到这样的值。那说明加速成功。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Padavan</tag>
+      
+      <tag>Smartdns</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>禁止Windows10自动升级</title>
+    <link href="/posts/b2257b05.html"/>
+    <url>/posts/b2257b05.html</url>
+    
+    <content type="html"><![CDATA[<p>新版的 Windows 11 系统与现在的Win10相比，有很多显著的变化。比如“毛玻璃”又回来了，原生支持运行 Android App……等等</p><p>对于普通人群，我是极力推荐大家把备用的机器拿去升级，去体验新系统的。但是有一类人，我不建议升级到Windows11，那就是我的观众们~</p><p>我频道发布的视频都是和直播强相关的，看我视频的大多都是主播。做直播，我们需要的是稳定！稳定！还是TM的稳定！</p><p>所以这一期，先教大家如何防止Windows10自动升级到Windows11。</p><hr><ul><li><p>禁止Windows10自动升级的视频操作演示</p><p><a href="https://www.bilibili.com/video/BV1864y1t7We/">Bilibili      禁止Windows10自动升级</a></p><p><a href="https://youtu.be/RUBgERbqRvo">YouTube  禁止Windows10自动升级</a></p></li></ul><p>我这里把主播分为两类：一类是 娱乐主播（唱歌、舞见） ，一类是游戏主播（主机游戏、PC游戏） 。不同类型的主播，建议使用不同的方法</p><hr><h1 id="方法一：把网络设置成按流量计费（推荐）"><a href="#方法一：把网络设置成按流量计费（推荐）" class="headerlink" title="方法一：把网络设置成按流量计费（推荐）"></a>方法一：把网络设置成按流量计费（推荐）</h1><p>第一个方法是把网络设置为“按流量计费”.</p><p>找到正在使用的网络（有线和Wi-Fi都建议设置），点击<code>属性</code>,在“<code>按流量计费的连接</code>”这里，把“<code>设为按流量计费的连接</code>”打开</p><p><img src="https://img.zhibocon.com//bimumoe/fufei.png"></p><p>用这个方案，有个需要注意的地方，那就是在“更新和安全”的高级选项里，确保<code>关闭“通过按流量计费的连接下载更新”</code></p><p><img src="https://img.zhibocon.com//bimumoe/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20210701223019.png"></p><p>这个方法，适用于所有主播，建议主播们跟着设置。</p><h1 id="方法二：使用各种第三方工具来禁止Windows10更新"><a href="#方法二：使用各种第三方工具来禁止Windows10更新" class="headerlink" title="方法二：使用各种第三方工具来禁止Windows10更新"></a>方法二：使用各种第三方工具来禁止Windows10更新</h1><p>缺点：会造成 微软商店无法下载App。所以游戏主播，使用这些工具的时候，需要特别注意。</p><p>所有工具，都需要以管理员身份来运行。</p><p><img src="https://img.zhibocon.com//bimumoe/image-20210701223445898.png" alt="image-20210701223445898"></p><p>第二个方式是使用诸如<code>“Dism++”</code> 、<code>“联想的工具”</code> 、<code>“Wu10Man”</code> 来禁止更新，三个工具选一个就好。</p><h2 id="Dism-禁止Windows10更新"><a href="#Dism-禁止Windows10更新" class="headerlink" title="Dism++禁止Windows10更新"></a>Dism++禁止Windows10更新</h2><p><code>Dism++下载地址</code> ：<a href="https://www.chuyu.me/zh-Hans/">https://www.chuyu.me/zh-Hans/</a></p><p><img src="https://img.zhibocon.com//bimumoe/image-20210701223517848.png" alt="image-20210701223517848"></p><h2 id="使用联想的工具一键禁止更新（推荐）"><a href="#使用联想的工具一键禁止更新（推荐）" class="headerlink" title="使用联想的工具一键禁止更新（推荐）"></a>使用联想的工具一键禁止更新（推荐）</h2><p>Lenovo Quick Fix：关闭或开启Win10系统的自动更新</p><p><a href="https://iknow.lenovo.com.cn/detail/dc_178562.html">https://iknow.lenovo.com.cn/detail/dc_178562.html</a></p><p><img src="https://img.zhibocon.com//bimumoe/image-20210701223538754.png" alt="image-20210701223538754"></p><h2 id="使用Wu10Man禁止更新"><a href="#使用Wu10Man禁止更新" class="headerlink" title="使用Wu10Man禁止更新"></a>使用Wu10Man禁止更新</h2><p><a href="https://github.com/WereDev/Wu10Man/releases">https://github.com/WereDev/Wu10Man/releases</a></p><p>Wu10Man支持禁用服务、屏蔽hosts等方式一起使用。</p><hr><p>手动改系统服务、组策略、注册表这些方式我个人不推荐使用，说不定哪天需要更新的时候，又不记得改了啥。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Windows10</tag>
+      
+      <tag>禁止更新</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>采集卡基础知识科普 采集卡购买指南</title>
     <link href="/posts/53142.html"/>
     <url>/posts/53142.html</url>
@@ -108,7 +150,7 @@
     <link href="/posts/1809.html"/>
     <url>/posts/1809.html</url>
     
-    <content type="html"><![CDATA[<blockquote><p><strong>开坑，慢慢填。</strong></p></blockquote><p>阅读本文前，需有以下心理准备</p><ul><li>  FPS游戏，观看注重fps（30和60fps的区别 很大一部分人只有对比才有感觉）</li><li>  其他条件不变的情况下，fps越大（越流畅），需要越高的<strong>视频比特率</strong>支撑</li><li>  本文不会直接告诉你用什么参数，这完全取决于你观看演示视频后个人观感</li><li>  游戏类型的不同，可以更改压制参数（如果你会改的话）</li><li>  不提供影响观看体验的压制方法</li><li>  文章有一定时效性，开始压制前，建议到下方演示用的视频评论区查看评论</li><li>  文末有软件下载（附配置文件）</li><li>  资源群，不许任何方式私聊群主，除了邮件</li><li>  其他待补充<span id="more"></span></li></ul><p>   </p><blockquote><p><strong>演示视频</strong></p></blockquote><p><a href="https://www.bilibili.com/video/av27578660/">演示视频地址（请一定到网站观看）</a> 观看时：同时打开不同的分P对比，根据自己的观感，在ShanaEncoder里更改对应参数即可。</p><blockquote><p><strong>ShanaEncoder下载</strong></p></blockquote><p>如果你能找到其他安心的下载渠道，任意下载即可 下载地址：<a href="https://1drv.ms/u/s!Ava_kr2b8oH_rhr9mpU091pioGGJ">OneDrive</a> 备用地址：<a href="https://share.weiyun.com/5aTd69U">微云</a></p><blockquote><p><strong>ShanaEncoder参数调整</strong></p></blockquote><p><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38h1droj30nw0h8aaq.jpg"> 解压ShanaEncoder后，需要调整**<em>“源目录”</em><strong>位置（视频转码后存放的位置）。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38hcz8qj30gp06h0sx.jpg"> 在主窗口，如图的位置，点击快速设置（快捷键F6）调出转码设置界面 如果你不是从我网盘群下载的，需要自行探索我下文中提到的内容。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38ic5sij30wm0n9qap.jpg"> 上图是</strong>ShanaEncoder<strong>和<a href="https://www.bilibili.com/video/av27578660/">演示视频</a>的一一对照表，能看懂吧？ 简单来说，根据<a href="https://www.bilibili.com/video/av27578660/">演示视频</a>里你喜欢的参数，来设置</strong>ShanaEncoder<strong>。 需要修改的地方如下 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38ioxmzj30h60ecaat.jpg"> <strong>帧速率</strong>：就FPS类游戏而言，根据演示视频的观感选择30或60； <strong>视频比特率</strong>：根据演示视频的观感填入相同的值。就B站而言，正常的压制手法中，码率不建议高于6000，如果在其他地方看到说码率限制1800的，麻烦拉黑发言人； <strong>尺寸</strong>：转码后视频的分辨率。根据演示视频的观感，在下拉列表里选择对应的值； <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38izrbej30ro0exgmw.jpg"> 合理的设置能大幅度缩短转码时间（硬件决定） 如果显卡是N卡：选择N卡的。如果开始后报错，那就改选Intel（R） GraphicsXXXX。如果还出错，那就取消勾选OpenCL选项； 如果显卡是A卡：选Intel（R） GraphicsXXXX。如果开始后报错，那就取消勾选OpenCL选项； 如果是其他：出问题就取消勾选OpenCL选项。不然就随它吧。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38jc74vj30og0enq3g.jpg"> 右键添加你要转换的视频，点击开始 PS：如果出错，那就调整调整</strong><em>“源目录”</em>**位置，或者看文中紫色的描述 转码后的视频，可以直接上传到B站，但是在上传之前，需要关闭B站的水印功能。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1ftrv36rej2j31e90p41dl.jpg">   下图是我用OBS录制游戏时用的参数，好奇宝宝可以尝试模仿 点击图片进入高清查看模式 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1ftl3rdhjorj31hc0u04qp.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p><strong>开坑，慢慢填。</strong></p></blockquote><p>阅读本文前，需有以下心理准备</p><ul><li>  FPS游戏，观看注重fps（30和60fps的区别 很大一部分人只有对比才有感觉）</li><li>  其他条件不变的情况下，fps越大（越流畅），需要越高的<strong>视频比特率</strong>支撑</li><li>  本文不会直接告诉你用什么参数，这完全取决于你观看演示视频后个人观感</li><li>  游戏类型的不同，可以更改压制参数（如果你会改的话）</li><li>  不提供影响观看体验的压制方法</li><li>  文章有一定时效性，开始压制前，建议到下方演示用的视频评论区查看评论</li><li>  文末有软件下载（附配置文件）</li><li>  资源群，不许任何方式私聊群主，除了邮件</li><li>  其他待补充<span id="more"></span></li></ul><blockquote><p><strong>演示视频</strong></p></blockquote><p><a href="https://www.bilibili.com/video/av27578660/">演示视频地址（请一定到网站观看）</a> </p><p>观看时：同时打开不同的分P对比，根据自己的观感，在ShanaEncoder里更改对应参数即可。</p><blockquote><p><strong>ShanaEncoder下载</strong></p></blockquote><p>如果你能找到其他安心的下载渠道，任意下载即可 </p><p>下载地址：<a href="https://1drv.ms/u/s!Ava_kr2b8oH_rhr9mpU091pioGGJ">OneDrive</a> 备用地址：<a href="https://share.weiyun.com/5aTd69U">微云</a></p><blockquote><p><strong>ShanaEncoder参数调整</strong></p></blockquote><p><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38h1droj30nw0h8aaq.jpg"> </p><p>解压ShanaEncoder后，需要调整**_”源目录”_**位置（视频转码后存放的位置）。 </p><p><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38hcz8qj30gp06h0sx.jpg"></p><p>在主窗口，如图的位置，点击快速设置（快捷键F6）调出转码设置界面 如果你不是从我网盘群下载的，需要自行探索我下文中提到的内容。</p><p> <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38ic5sij30wm0n9qap.jpg"> </p><p>上图是<strong>ShanaEncoder</strong>和<a href="https://www.bilibili.com/video/av27578660/">演示视频</a>的一一对照表，能看懂吧？ 简单来说，根据<a href="https://www.bilibili.com/video/av27578660/">演示视频</a>里你喜欢的参数，来设置<strong>ShanaEncoder</strong>。</p><p> 需要修改的地方如下 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38ioxmzj30h60ecaat.jpg"></p><p> <strong>帧速率</strong>：就FPS类游戏而言，根据演示视频的观感选择30或60； </p><p><strong>视频比特率</strong>：根据演示视频的观感填入相同的值。就B站而言，正常的压制手法中，码率不建议高于6000，如果在其他地方看到说码率限制1800的，麻烦拉黑发言人； </p><p><strong>尺寸</strong>：转码后视频的分辨率。根据演示视频的观感，在下拉列表里选择对应的值； </p><p><img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38izrbej30ro0exgmw.jpg"> 合理的设置能大幅度缩短转码时间（硬件决定） 如果显卡是N卡：选择N卡的。如果开始后报错，那就改选Intel（R） GraphicsXXXX。如果还出错，那就取消勾选OpenCL选项； 如果显卡是A卡：选Intel（R） GraphicsXXXX。如果开始后报错，那就取消勾选OpenCL选项； 如果是其他：出问题就取消勾选OpenCL选项。不然就随它吧。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6ly1ftl38jc74vj30og0enq3g.jpg"> 右键添加你要转换的视频，点击开始 PS：如果出错，那就调整调整**_”源目录”_**位置，或者看文中紫色的描述 转码后的视频，可以直接上传到B站，但是在上传之前，需要关闭B站的水印功能。 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1ftrv36rej2j31e90p41dl.jpg">   下图是我用OBS录制游戏时用的参数，好奇宝宝可以尝试模仿 点击图片进入高清查看模式 <img src="https://zhibocon.com/wp-content/uploads/2019/04/006UvKq6gy1ftl3rdhjorj31hc0u04qp.jpg"></p>]]></content>
     
     
     <categories>
@@ -289,13 +331,13 @@
     
     <tags>
       
+      <tag>Padavan</tag>
+      
       <tag>PS4</tag>
       
       <tag>xbox</tag>
       
       <tag>Dnsmasq</tag>
-      
-      <tag>Padavan</tag>
       
       <tag>下载慢</tag>
       
@@ -326,13 +368,13 @@
     
     <tags>
       
+      <tag>Padavan</tag>
+      
       <tag>PS4</tag>
       
       <tag>xbox</tag>
       
       <tag>路由器</tag>
-      
-      <tag>Padavan</tag>
       
       <tag>梅林</tag>
       
