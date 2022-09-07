@@ -4,27 +4,6 @@
   
   
   <entry>
-    <title>让主机游戏满速下载！让视频加载更快！老毛子Padavan固件下Smartdns使用方法分享</title>
-    <link href="/posts/51466/"/>
-    <url>/posts/51466/</url>
-    
-    <content type="html"><![CDATA[<p>使用SmartDNS可以改善Origin、Steam、Xbox、育碧等平台下载游戏慢的现象，让其达到正常能用的水平。</p><p>纯Windows平台玩家推荐使用UsbEAm Hosts Editor，可以很方便的就达到提速效果。</p><p>SmartDNS除了可以让下载有速度外，对于视频网站的视频加载也有一定改善，尤其是小运营商的用户。</p><hr><h3 id="视频版地址"><a href="#视频版地址" class="headerlink" title="视频版地址"></a>视频版地址</h3><p><a href="https://www.bilibili.com/video/BV18f4y1j7EF/">Bilibili 让主机游戏满速下载！让视频加载更快！</a></p><p><a href="https://youtu.be/atgkEl-t9EM">YouTube  让主机游戏满速下载！让视频加载更快！</a></p><hr><h3 id="为什么选择Smartdns？"><a href="#为什么选择Smartdns？" class="headerlink" title="为什么选择Smartdns？"></a>为什么选择Smartdns？</h3><p>玩游戏也许都知道这款神器：<a href="https://www.dogfight360.com/blog/475/">UsbEAm Hosts Editor</a>，通过这款神器，可以一定程度上解决各式各样的下载问题。</p><p>UsbEAm Hosts Editor目前仅支持Windows平台，如果你要在其他平台使用的话，得有超强的动手能力。</p><p>我自己的解决方案就是把实现类似效果的工具直接放到了路由器上！即今天要分享的 Smartdns。</p><p>只要我们的设备接入了路由器，就可以在不修改任何配置的情况下，实现各平台的加速下载～</p><hr><h3 id="简单的效果展示"><a href="#简单的效果展示" class="headerlink" title="简单的效果展示"></a>简单的效果展示</h3><p><img src="https://i.loli.net/2021/07/26/enuaoOBbHJrEcwM.png"></p><p>这个是我下载育碧的看门狗的速度，仅有15MB/s。速度是我宽带的50%。</p><p>PC上不怎么玩育碧的游戏，所以不太清楚这边的下载质量是如何的？</p><p>至于<strong>Xbox</strong>的速度，我视频里有提到，简单的结论就是有效果（且PC版的Xbox App里下载游戏速度也有提升）</p><p><strong>Playstation</strong>商店，因为在国内有稳定的CDN，所以下载速度一直都很稳。不开Smartdns的时候，商店里的游戏图片加载慢。开了后，顺滑很多。系统更新速度也很快。</p><p><strong>NS</strong>上下载游戏的速度？</p><p>据我记忆中，有略微提升。但是不明显。截止目前，非国行的机器下载依旧走的是海外的服务器。</p><hr><h3 id="Smartdns在路由器上的设置"><a href="#Smartdns在路由器上的设置" class="headerlink" title="Smartdns在路由器上的设置"></a>Smartdns在路由器上的设置</h3><ul><li>路由器 红米的2100</li><li>固件  chongshengB大佬的 <a href="https://github.com/chongshengB/rt-n56u/releases">https://github.com/chongshengB/rt-n56u/releases</a></li></ul><p>刷了上述固件后，在路由器管理后台，找到找到Smartdns，DNS加速先不启用。</p><p>打开“上游服务器”，在里面添加常用的国内外DNS</p><p><img src="https://i.loli.net/2021/07/26/GdXvNahOYjoDZsz.png" alt="WX"></p><p><strong>把下方图中左侧的添加到右侧</strong><img src="https://i.loli.net/2021/07/26/j1Pc9b4w3vEFIpM.png" alt="smartdns5"></p><p>有一组参数必须增加</p><p>根据自己所在地、所用的运营商，添加对应宽带运营商的DNS到路由器的上游服务器内</p><p>查询所在地、所用的运营商DNS：<a href="https://www.ip.cn/dns.html">https://www.ip.cn/dns.html</a></p><p><img src="https://i.loli.net/2021/07/26/gQ8HYdNCZbK6VBz.png" alt="smartdns4"></p><p>（添加完成后的效果）</p><p>“上游服务器“设置完毕后，回到”基础设置“页面，以下为参考设置：</p><p><img src="https://i.loli.net/2021/07/26/4rYGPxt3OokLwiy.png" alt="smartdns3"></p><p><img src="https://i.loli.net/2021/07/26/728zYAFoqdxfBWJ.png" alt="smartdns2"></p><p>修改完毕后记得“应用设置”，最后开启“DNS加速”的开关。</p><p><strong>验证是否有加速成功</strong></p><p><img src="https://i.loli.net/2021/07/26/WcRkjGbngU2oHaA.png" alt="smartdns1"></p><p>在电脑上运行命令行窗口，输入 nslookup <a href="http://bimu.tv/">bimu.tv</a>  如果看到返回了看是否得到这样的值。那说明加速成功。</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Padavan</tag>
-      
-      <tag>Smartdns</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>禁止Windows10自动升级</title>
     <link href="/posts/47063/"/>
     <url>/posts/47063/</url>
@@ -38,6 +17,27 @@
       <tag>Windows10</tag>
       
       <tag>禁止更新</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>让主机游戏满速下载！让视频加载更快！老毛子Padavan固件下Smartdns使用方法分享</title>
+    <link href="/posts/51466/"/>
+    <url>/posts/51466/</url>
+    
+    <content type="html"><![CDATA[<p>使用SmartDNS可以改善Origin、Steam、Xbox、育碧等平台下载游戏慢的现象，让其达到正常能用的水平。</p><p>纯Windows平台玩家推荐使用UsbEAm Hosts Editor，可以很方便的就达到提速效果。</p><p>SmartDNS除了可以让下载有速度外，对于视频网站的视频加载也有一定改善，尤其是小运营商的用户。</p><hr><h3 id="视频版地址"><a href="#视频版地址" class="headerlink" title="视频版地址"></a>视频版地址</h3><p><a href="https://www.bilibili.com/video/BV18f4y1j7EF/">Bilibili 让主机游戏满速下载！让视频加载更快！</a></p><p><a href="https://youtu.be/atgkEl-t9EM">YouTube  让主机游戏满速下载！让视频加载更快！</a></p><hr><h3 id="为什么选择Smartdns？"><a href="#为什么选择Smartdns？" class="headerlink" title="为什么选择Smartdns？"></a>为什么选择Smartdns？</h3><p>玩游戏也许都知道这款神器：<a href="https://www.dogfight360.com/blog/475/">UsbEAm Hosts Editor</a>，通过这款神器，可以一定程度上解决各式各样的下载问题。</p><p>UsbEAm Hosts Editor目前仅支持Windows平台，如果你要在其他平台使用的话，得有超强的动手能力。</p><p>我自己的解决方案就是把实现类似效果的工具直接放到了路由器上！即今天要分享的 Smartdns。</p><p>只要我们的设备接入了路由器，就可以在不修改任何配置的情况下，实现各平台的加速下载～</p><hr><h3 id="简单的效果展示"><a href="#简单的效果展示" class="headerlink" title="简单的效果展示"></a>简单的效果展示</h3><p><img src="https://i.loli.net/2021/07/26/enuaoOBbHJrEcwM.png"></p><p>这个是我下载育碧的看门狗的速度，仅有15MB/s。速度是我宽带的50%。</p><p>PC上不怎么玩育碧的游戏，所以不太清楚这边的下载质量是如何的？</p><p>至于<strong>Xbox</strong>的速度，我视频里有提到，简单的结论就是有效果（且PC版的Xbox App里下载游戏速度也有提升）</p><p><strong>Playstation</strong>商店，因为在国内有稳定的CDN，所以下载速度一直都很稳。不开Smartdns的时候，商店里的游戏图片加载慢。开了后，顺滑很多。系统更新速度也很快。</p><p><strong>NS</strong>上下载游戏的速度？</p><p>据我记忆中，有略微提升。但是不明显。截止目前，非国行的机器下载依旧走的是海外的服务器。</p><hr><h3 id="Smartdns在路由器上的设置"><a href="#Smartdns在路由器上的设置" class="headerlink" title="Smartdns在路由器上的设置"></a>Smartdns在路由器上的设置</h3><ul><li>路由器 红米的2100</li><li>固件  chongshengB大佬的 <a href="https://github.com/chongshengB/rt-n56u/releases">https://github.com/chongshengB/rt-n56u/releases</a></li></ul><p>刷了上述固件后，在路由器管理后台，找到找到Smartdns，DNS加速先不启用。</p><p>打开“上游服务器”，在里面添加常用的国内外DNS</p><p><img src="https://i.loli.net/2021/07/26/GdXvNahOYjoDZsz.png" alt="WX"></p><p><strong>把下方图中左侧的添加到右侧</strong><img src="https://i.loli.net/2021/07/26/j1Pc9b4w3vEFIpM.png" alt="smartdns5"></p><p>有一组参数必须增加</p><p>根据自己所在地、所用的运营商，添加对应宽带运营商的DNS到路由器的上游服务器内</p><p>查询所在地、所用的运营商DNS：<a href="https://www.ip.cn/dns.html">https://www.ip.cn/dns.html</a></p><p><img src="https://i.loli.net/2021/07/26/gQ8HYdNCZbK6VBz.png" alt="smartdns4"></p><p>（添加完成后的效果）</p><p>“上游服务器“设置完毕后，回到”基础设置“页面，以下为参考设置：</p><p><img src="https://i.loli.net/2021/07/26/4rYGPxt3OokLwiy.png" alt="smartdns3"></p><p><img src="https://i.loli.net/2021/07/26/728zYAFoqdxfBWJ.png" alt="smartdns2"></p><p>修改完毕后记得“应用设置”，最后开启“DNS加速”的开关。</p><p><strong>验证是否有加速成功</strong></p><p><img src="https://i.loli.net/2021/07/26/WcRkjGbngU2oHaA.png" alt="smartdns1"></p><p>在电脑上运行命令行窗口，输入 nslookup <a href="http://bimu.tv/">bimu.tv</a>  如果看到返回了看是否得到这样的值。那说明加速成功。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Padavan</tag>
+      
+      <tag>Smartdns</tag>
       
     </tags>
     
